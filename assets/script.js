@@ -32,19 +32,23 @@ const timeSlot = [
 
 for (var i = 0; i < timeSlot.length; i++) {
     const timeSlotEl = $('<div>');
-    const task = $('<input>');
+    const taskEl = $('<textarea>');
     const completedEl = $('<button>');
 
     timeSlotEl.text(timeSlot[i]);
-    task.text('');
+    timeSlotEl.addClass('time-block')
+    taskEl.text('');
+    completedEl.addClass('saveBtn');
     
-    timeSlotEl.append(task);
+    taskEl.addClass('col-md-10');
+    completedEl.addClass('col-md-1');
+    timeSlotEl.addClass('row');
+    timeSlotEl.append(taskEl);
     timeSlotEl.append(completedEl);
     plannerContainer.append(timeSlotEl);
 }
 
 // setting attributes to timeSlot slots
-
 
 
 
