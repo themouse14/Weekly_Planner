@@ -1,4 +1,5 @@
 // today's date inside header, initialize local storage at load
+$(init);
 
 function init() {
     const today = moment();
@@ -24,40 +25,40 @@ function init() {
 //const saturdayEl = $('<div>');
 //const sundayEl = $('<div>');
 
-const plannerContainer = $(".container");
+//const plannerContainer = $(".container");
 
-const timeSlot = [
-    '9AM',
-    '10AM',
-    '11AM',
-    '12AM',
-    '1PM',
-    '2PM',
-    '3PM',
-    '4PM',
-    '5PM',
-];
+//const timeSlot = [
+    //'9AM',
+    //'10AM',
+    //'11AM',
+    //'12AM',
+    //'1PM',
+    //'2PM',
+    //'3PM',
+    //'4PM',
+    //'5PM',
+//];
 
 
 // creating a for-loop to create a <div> element for each day
 
-for (var i = 0; i < timeSlot.length; i++) {
-    const timeSlotEl = $('<div>');
-    const taskEl = $('<textarea>');
-    const completedEl = $('<button>');
+// for (var i = 0; i < timeSlot.length; i++) {
+//     const timeSlotEl = $('<div>');
+//     const taskEl = $('<textarea>');
+//     const completedEl = $('<button>');
 
-    timeSlotEl.text(timeSlot[i]);
-    timeSlotEl.addClass('time-block')
-    taskEl.text('');
-    completedEl.addClass('saveBtn');
+//     timeSlotEl.text(timeSlot[i]);
+//     timeSlotEl.addClass('time-block')
+//     taskEl.text('');
+//     completedEl.addClass('saveBtn');
     
-    taskEl.addClass('col-md-10');
-    completedEl.addClass('col-md-1');
-    timeSlotEl.addClass('row', 'hour');
-    timeSlotEl.append(taskEl);
-    timeSlotEl.append(completedEl);
-    plannerContainer.append(timeSlotEl);
-}
+//     taskEl.addClass('col-md-10');
+//     completedEl.addClass('col-md-1');
+//     timeSlotEl.addClass('row', 'hour');
+//     timeSlotEl.append(taskEl);
+//     timeSlotEl.append(completedEl);
+//     plannerContainer.append(timeSlotEl);
+// }
 
 function colorTimeBlocks() {
     $(".time-block").each(function() {
